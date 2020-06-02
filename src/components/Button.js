@@ -9,7 +9,7 @@ class Button extends React.Component {
   render() {
     let text;
 
-    switch (this.context) {
+    switch (this.context.language) {
       case "english":
         text = "Submit";
         break;

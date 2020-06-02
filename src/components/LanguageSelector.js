@@ -4,7 +4,11 @@ import { MyDiv } from "./styled/MyDiv";
 import { Title } from "./styled/Title";
 import { CustomImg } from "./styled/CustomImg";
 
+import LanguageContextX from "../contexts/LanguageContext";
+
 class LanguageSelector extends React.Component {
+  static contextType = LanguageContextX;
+
   render() {
     return (
       <>
@@ -14,20 +18,20 @@ class LanguageSelector extends React.Component {
         <div style={{ textAlign: "center", margin: "30px" }}>
           <CustomImg
             src="https://www.worldometers.info/img/flags/us-flag.gif"
-            onClick={() => this.props.onLanguageChange("english")}
-            isSelected={this.props.languageSelected === "english"}
+            onClick={() => this.context.onLanguageChange("english")}
+            isSelected={this.context.language === "english"}
           />
 
           <CustomImg
             src="https://www.worldometers.info/img/flags/nl-flag.gif"
-            onClick={() => this.props.onLanguageChange("dutch")}
-            isSelected={this.props.languageSelected === "dutch"}
+            onClick={() => this.context.onLanguageChange("dutch")}
+            isSelected={this.context.language === "dutch"}
           />
 
           <CustomImg
             src="https://www.worldometers.info/img/flags/br-flag.gif"
-            onClick={() => this.props.onLanguageChange("portuguese")}
-            isSelected={this.props.languageSelected === "portuguese"}
+            onClick={() => this.context.onLanguageChange("portuguese")}
+            isSelected={this.context.language === "portuguese"}
           />
         </div>
       </>
