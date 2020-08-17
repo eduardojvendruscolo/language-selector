@@ -1,6 +1,6 @@
 import React from "react";
 
-const Context = React.createContext("english");
+const Context = React.createContext();
 
 export class LanguageStore extends React.Component {
   state = { language: "english" };

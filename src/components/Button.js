@@ -9,6 +9,8 @@ class Button extends React.Component {
   render() {
     let text;
 
+    console.log(this);
+
     switch (this.context.language) {
       case "english":
         text = "Submit";

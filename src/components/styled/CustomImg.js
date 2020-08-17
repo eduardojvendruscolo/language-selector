@@ -22,3 +22,16 @@ export const CustomImg = styled.img`
   ${(props) =>
     props.isSelected && "border: 5px solid gray; border-style: inset;"}
 `;
+
+const loading = keyframes`
+   0% {opacity: 0.3}
+   50% {opacity: 1}
+   100% {opacity: 0.3}
+`;
+
+export const CustomImgLoading = styled.div`
+  width: 330px;
+  height: 200px;
+  background-color: gray;
+  animation: ${loading} 2s linear infinite;
+`;
