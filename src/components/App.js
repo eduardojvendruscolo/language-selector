@@ -4,7 +4,6 @@ import UserCreate from "./UserCreate";
 import LanguageSelector from "./LanguageSelector";
 
 import { MyDiv } from "./styled/MyDiv";
-import { Title } from "./styled/Title";
 
 import { LanguageStore } from "../contexts/LanguageContext";
 import ColorContet from "../contexts/ColorContext";
